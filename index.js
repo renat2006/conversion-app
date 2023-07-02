@@ -26,6 +26,8 @@ unitInfo = [
 const convertBtn = document.getElementById("convert-btn")
 const numToConvertEl = document.getElementById("num-to-convert")
 const dataBlocks = document.getElementById("data-blocks")
+const mainEl = document.getElementById("main")
+
 const render = (data, numToConvert) => {
     let blockString = ''
     for (let num in data) {
@@ -61,4 +63,15 @@ convertBtn.addEventListener("click", () => {
     }
 
 })
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 
+    mainEl.classList.add("dark")
+
+}
+else {
+    mainEl.classList.add("light")
+}
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    const newColorScheme = event.matches ? "dark" : "light";
+    console.log(newColorScheme)
+});

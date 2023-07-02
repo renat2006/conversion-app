@@ -1,8 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=M+PLUS+1p:wght@100;300;400;500;700;800;900&display=swap');
-
+.light{
+    --body-color: #F4F4F4;
+    --block-color: #FFF;
+    --heading-color: #5A537B;
+    --text-color: #353535;
+}
+.dark{
+    --body-color: #1F2937;
+    --block-color: #273549;
+    --heading-color: #CCC1FF;
+    --text-color: #FFFFFF;
+}
 body {
+
     margin: 0;
-    background: #1F2937;
+    background: var(--body-color);
     font-family: Inter, serif;
 }
 
@@ -83,13 +95,13 @@ padding: 35px;
 .block{
     padding: 30px;
     border-radius: 5px;
-    background: #273549;
+    background: var(--block-color);
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 .block-heading{
-    color: #CCC1FF;
+    color: var(--heading-color);
     text-align: center;
     font-size: 20px;
 
@@ -98,7 +110,7 @@ padding: 35px;
 
 }
 .block-data{
-    color: #FFF;
+    color: var(--text-color);
     text-align: center;
 
 
